@@ -1,0 +1,14 @@
+{% render 'shogun-products', content: page %}
+
+<!-- banner -->
+{% unless page.handle == 'take-our-quiz' %}
+<!-- {% unless page.handle == 'otrdiagnostics' %} -->
+<!--   {% unless collection.handle == 'diagnostic-packages' %} -->
+
+{% section 'banner-section' %}
+    
+<!-- {% endunless %} -->
+<!-- {% endunless %} -->
+{% endunless %}
+
+{{ page.content }}

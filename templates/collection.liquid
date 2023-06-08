@@ -1,0 +1,13 @@
+{% render 'shogun-products', content: collection %}
+{{collection.metafields.shogun.above}}
+<!-- /templates/collection.liquid -->
+{% comment %}
+  The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+{% endcomment %}
+ 
+<!-- {% unless collection.handle == 'diagnostic-packages' %} -->
+    {% section 'banner-section' %}
+<!-- {% endunless %} -->
+
+{% section 'collection-template' %}
+{{collection.metafields.shogun.below}}

@@ -1,0 +1,61 @@
+{% if section.settings.enable_section %}
+<div class="banner-section mb-4" style="background-image: url({{ section.settings.background_image | img_url: 'master' }});">
+  <div class="banner-content text-center">
+    <h2 style="color: white; max-width: 600px; margin-left: auto; margin-right: auto;">{{ section.settings.title }}</h2>
+    <p class="mb-3" style="max-width: 600px; margin-left: auto; margin-right: auto;">{{ section.settings.description }}</p>
+    <a href="{{ section.settings.button_url }}" class="button btn-otr">{{ section.settings.button_text }}</a>
+  <p class="text-center mt-4" style="font-size: 12px; " >Exclusions apply. <a type="button" class="text-center" tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="top" title="Offer details" data-content="{{ section.settings.terms }}">
+   <span style="text-decoration: underline; color: #339933">See terms.</span></a></p>
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Banner Section",
+  "settings": [
+     {
+      "type": "checkbox",
+      "label": "Enable Section",
+      "id": "enable_section",
+      "default": false
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title",
+      "default": "Welcome to our Store!"
+    },
+    {
+      "type": "textarea",
+      "label": "Description",
+      "id": "description",
+      "default": "Discover our amazing products."
+    },
+    {
+      "type": "textarea",
+      "label": "Terms",
+      "id": "terms",
+      "default": "Terms of sale."
+    },
+    {
+      "type": "image_picker",
+      "label": "Background Image",
+      "id": "background_image"
+    },
+    {
+      "type": "url",
+      "label": "Button URL",
+      "id": "button_url",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "label": "Button Text",
+      "id": "button_text",
+      "default": "Shop Now"
+    }
+  ]
+}
+{% endschema %}
+

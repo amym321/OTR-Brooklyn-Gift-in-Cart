@@ -1,0 +1,87 @@
+<!-- Reamaze Config file - DO NOT REMOVE -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.account = "otrperformance";
+</script>
+
+<!-- reamaze_embeddable_8453_s -->
+<!-- Embeddable - OTR Performance Chat / Contact Form Shoutbox -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support['account'] = 'otrperformance';
+  _support['ui']['contactMode'] = 'mixed';
+  _support['ui']['enableKb'] = 'true';
+  _support['ui']['styles'] = {
+    widgetColor: 'rgb(51, 153, 51)',
+  };
+  _support['ui']['shoutboxFacesMode'] = "default";
+  _support['ui']['widget'] = {
+    icon: 'chat',
+    displayOn: 'all',
+    allowBotProcessing: false,
+    label: {
+      text: 'Chat / FAQ',
+      mode: "prompt-3",
+      delay: 10,
+      duration: 20,
+    },
+    position: 'bottom-right',
+    mobilePosition: 'bottom-right'
+  };
+  _support['custom_fields'] = {
+    'OTR Products?': {
+      pos: 1573054907388,
+      type: 'dropdown',
+      value: ['OTR Reset Tool','OTR Diagnostics','No I don\'t'],
+      required: true,
+      placeholder: 'Do you currently have an OTR Product?',
+      defaultValue: 'undefined',
+    }
+  };
+  _support['apps'] = {
+    recentConversations: {"header":"Recent Conversations"},
+    faq: {"enabled":true},
+    orders: {"enabled":true,"enable_notes":true}
+  };
+</script>
+<!-- reamaze_embeddable_8453_e -->
+
+
+
+<!-- reamaze_cue_81351_s -->
+<!-- Cue - OTR46R launch -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.outbounds = _support.outbounds || [];
+  _support.outbounds.push({
+    id: "81351",
+    name: "OTR46R launch",
+    message: "We just launched the OTR Reset Tool for Cummins 2021-2023 model-year trucks. \n\nWith the OTR Reset Tool, maintaining your vehicle has never been easier. \n\nCheck it out and experience peace of mind for yourself!",
+    sound: true,
+    transient: true,
+    botsEnabled: false,
+    disableCueClick: false,
+    enableCustomFields: false,
+    start: "",
+    end: "",
+    user: {
+      type: "staff",
+      name: "David",
+      staffName: "David Melinte",
+    },
+    buttons: [
+      {
+        text: "Take me there! ",
+        url: "https://otrperformance.com/collections/reset-tools/products/otr-reset-tool-cummins?variant=44327102939378",
+      },
+    ],
+    rules: [
+      {
+        type: "url",
+        op: "doesNotContain",
+        value: "diagnostics",
+      },
+    ],
+  });
+</script>
+<!-- reamaze_cue_81351_e -->
