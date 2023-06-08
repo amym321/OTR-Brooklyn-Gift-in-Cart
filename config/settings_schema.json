@@ -1285,6 +1285,18 @@
           "zh-CN": "启用订单备注",
           "zh-TW": "啟用訂單備註"
         }
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_gift",
+        "label": "Offer gift product in cart",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "cart_gift_text",
+        "label": "Text for gift product in cart",
+        "default": "Yes, I want a FREE Month of Freedom T-shirt with my purchase!"
       }
     ]
   },
